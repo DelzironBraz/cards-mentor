@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PreviewProductComponent } from './_pages/components/preview-product/preview-product.component';
+import { NftCardComponent } from './_pages/components/nft-card/nft-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PreviewProductComponent
+    PreviewProductComponent,
+    NftCardComponent
   ],
   imports: [
     BrowserModule,
