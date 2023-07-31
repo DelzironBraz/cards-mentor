@@ -1,0 +1,132 @@
+//Typography
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+// Colors
+
+// Primary
+
+$primary-soft : hsl(215, 51%, 70%);
+$primary-cyan: hsl(178, 100%, 50%);
+
+// Neutral
+
+$neutral-300: hsl(217, 54%, 11%);
+$neutral-200: hsl(216, 50%, 16%);
+$neutral-100: hsl(215, 32%, 27%);
+$neutral-50: hsl(0, 0%, 100%);
+
+// Style
+
+.nft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $neutral-300;
+
+    &-link {
+        display: flex;
+        max-width: max-content;
+        width: 260px;
+
+        .nft-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            background-color: $neutral-200;
+            width: fit-content;
+            height: fit-content;
+            gap: 1rem;
+
+            &-img {
+                border-radius: 10px;
+                width: calc(100% - 40px);
+                height: 50%;
+                margin-top: 20px;
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin: 0 20px;
+                gap: 1rem;
+
+                &-title {
+                    color: $neutral-50;
+
+                    &:active {
+                        color: $primary-cyan;
+                    }
+                }
+
+                &-text {
+                    width: 100%;
+                    font-size: 0.9rem;
+                    color: $primary-soft;
+                    font-weight: 300;
+                }
+
+                &-icons {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    span {
+                        font-size: 0.9rem;
+                        color: $primary-soft;
+                        font-weight: 300;
+
+                        &:nth-child(1) {
+                            display: inline-block;
+                            color: $primary-cyan;
+                            font-weight: 500;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+
+                &-profile {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0.7rem;
+                    padding: 0.5rem 0;
+                    border-top: 1px solid $neutral-100;
+                    width: 100%;
+
+                    &-img {
+                        border: 1px solid $neutral-50;
+                        border-radius: 50%;
+                        width: 30px;
+                    }
+
+                    &-text {
+                        font-size: 0.8rem;
+                        color: $primary-soft;
+
+                        span {
+                            font-size: 0.8rem;
+                            color: $primary-soft;
+                            color: $neutral-50;
+
+                            &:active {
+                                color: $primary-cyan;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
