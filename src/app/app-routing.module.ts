@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NftCardComponent } from './_pages/components/nft-card/nft-card.component';
+import { OrderSummaryComponent } from './_pages/components/order-summary/order-summary.component';
 
 const routes: Routes = [
-  { path: '', component: NftCardComponent }
+  { path: '', component: OrderSummaryComponent }
 ];
 
 @NgModule({
