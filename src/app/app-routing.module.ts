@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OrderSummaryComponent } from './_pages/components/order-summary/order-summary.component';
 import { QrCodeComponent } from './_pages/components/qr-code/qr-code.component';
+import { ProfileCardComponent } from './_pages/components/profile-card/profile-card.component';
 
 const routes: Routes = [
-  { path: '', component: QrCodeComponent }
+  { path: '', component: ProfileCardComponent }
 ];
 
 @NgModule({
