@@ -7,6 +7,7 @@ import { PreviewProductComponent } from './_pages/components/preview-product/pre
 import { NftCardComponent } from './_pages/components/nft-card/nft-card.component';
 import { OrderSummaryComponent } from './_pages/components/order-summary/order-summary.component';
 import { QrCodeComponent } from './_pages/components/qr-code/qr-code.component';
+import { ProfileCardComponent } from './_pages/components/profile-card/profile-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { QrCodeComponent } from './_pages/components/qr-code/qr-code.component';
     PreviewProductComponent,
     NftCardComponent,
     OrderSummaryComponent,
-    QrCodeComponent
+    QrCodeComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,
