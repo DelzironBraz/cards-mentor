@@ -1,0 +1,198 @@
+// Tipography
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+// Primary
+
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan-50: hsl(184, 100%, 22%);
+$dark-cyan-100: hsl(179, 100%, 13%);
+
+// Neutral
+
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$ligh-gray: hsl(0, 0%, 95%);
+
+@mixin theme($theme) {
+    background-color: $theme;
+    color: $ligh-gray;
+    padding: 3rem;
+}
+
+%card-template {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    height: 100%;
+}
+
+%card-info-template {
+    display: flex;
+    justify-content: space-between;
+    justify-items: start;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+    line-height: 1.7;
+
+    img {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+%title-template {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    transform: scaleY(2);
+}
+
+@mixin button-template($color) {
+    border: 1px solid $ligh-gray;
+    background-color: $ligh-gray;
+    color: $color;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+
+    &:hover {
+        background-color: transparent;
+        color: $ligh-gray ;
+    }
+}
+
+.preview {
+    &-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: $ligh-gray;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 280px);
+        height: 500px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-card {
+        &-sedans {
+            @include theme($bright-orange);
+            @extend %card-template;
+            border-radius: 10px 0 0 10px;
+
+            button {
+                @include button-template($bright-orange);
+            }
+        }
+
+        &-suvs {
+            @include theme($dark-cyan-50);
+            @extend %card-template;
+
+            button {
+                @include button-template($dark-cyan-50);
+            }
+        }
+
+        &-luxury {
+            @include theme($dark-cyan-100);
+            @extend %card-template;
+            border-radius: 0 10px 10px 0;
+
+            button {
+                @include button-template($dark-cyan-100);
+            }
+        }
+
+        &-title {
+            @extend %title-template;
+        }
+
+        &-info {
+            @extend %card-info-template;
+        }
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .preview {
+
+        &-area {
+            height: 100%;
+            padding: 2rem 0;
+        }
+
+        &-grid {
+            grid-template-columns: repeat(1, 1fr);
+            width: 80%;
+            height: fit-content;
+        }
+
+        &-card {
+            &-sedans {
+                width: 290px;
+                height: 500px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            &-suvs {
+                width: 290px;
+                height: 500px;
+            }
+
+            &-luxury {
+                width: 290px;
+                height: 500px;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .preview {
+
+        &-area {
+            height: 100%;
+            padding: 2rem 0;
+        }
+
+        &-grid {
+            grid-template-columns: repeat(1, 1fr);
+            height: fit-content;
+        }
+
+        &-card {
+            &-sedans {
+                width: 270px;
+                height: 500px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            &-suvs {
+                width: 270px;
+                height: 500px;
+            }
+
+            &-luxury {
+                width: 270px;
+                height: 500px;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+}
