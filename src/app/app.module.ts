@@ -9,6 +9,7 @@ import { OrderSummaryComponent } from './_pages/components/order-summary/order-s
 import { QrCodeComponent } from './_pages/components/qr-code/qr-code.component';
 import { ProfileCardComponent } from './_pages/components/profile-card/profile-card.component';
 import { ColumnPreviewComponent } from './_pages/components/column-preview/column-preview.component';
+import { NavbarComponent } from './_pages/components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ColumnPreviewComponent } from './_pages/components/column-preview/colum
     OrderSummaryComponent,
     QrCodeComponent,
     ProfileCardComponent,
-    ColumnPreviewComponent
+    ColumnPreviewComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
